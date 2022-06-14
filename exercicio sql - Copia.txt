@@ -1,0 +1,25 @@
+Products
+ProductID	ProductName	SupplierID	CategoryID	Unit	Price
+
+Categories
+CategoryID	CategoryName	Description
+
+Suppliers
+SupplierID	SupplierName
+
+
+SELECT Products.*, CategoryName, SupplierName FROM Products INNER JOIN Categories ON Products.CategoryID=Categories.CategoryID INNER JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID WHERE price > 60 AND unit LIKE '%jars%' ORDER BY price
+-----------------------
+SELECT Products.*, CategoryName, SupplierName FROM Products, Categories, Suppliers WHERE Products.CategoryID=Categories.CategoryID AND Products.SupplierID=Suppliers.SupplierID AND price < 10 AND unit LIKE '%bags%' ORDER BY price
+-------------
+
+
+1. produtos que tenha "Chef" no nome 
+2. produtos com unidade de medida "boxes"
+3. produtos com preço entre 30 e 50
+
+
+
+
+
+
